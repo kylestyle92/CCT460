@@ -2,7 +2,7 @@
 /**
  * The template for displaying all single posts.
  *
- * @package clickture
+ * @package Clickture
  */
 
 get_header(); ?>

@@ -2,7 +2,7 @@
 /**
  * Template part for displaying posts.
  *
- * @package clickture
+ * @package Clickture
  */
 
 ?>

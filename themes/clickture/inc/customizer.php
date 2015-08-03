@@ -1,8 +1,8 @@
 <?php
 /**
- * clickture Theme Customizer
+ * Clickture Theme Customizer
  *
- * @package clickture
+ * @package Clickture
  */
 
 /**

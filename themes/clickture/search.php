@@ -2,7 +2,7 @@
 /**
  * The template for displaying search results pages.
  *
- * @package clickture
+ * @package Clickture
  */
 
 get_header(); ?>
