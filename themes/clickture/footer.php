@@ -11,16 +11,50 @@
 
 	</div><!-- #content -->
 
-	<footer id="colophon" class="site-footer" role="contentinfo">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'clickture' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'clickture' ), 'WordPress' ); ?></a>
-			<span class="sep"> | </span>
-			<?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'clickture' ), 'clickture', '<a href="http://underscores.me/" rel="designer">Kyle Johnson, Alex Naccarato, Alex Naccarato</a>' ); ?>
+	
+		<div class="container">
+		
+		<footer id="colophon" class="site-footer" role="contentinfo">
+	<div class="bottomMenu">
+              <?php
+//this section of code creates the menu at the bottom of the page, inside the footer
+wp_nav_menu(array(
+    'theme_location' => 'secondary'
+));
+?>  
+    </div>
+	        <div id="footer-widgets">
+	            <?php
+if (is_active_sidebar('footer')):
+?>
+	                <aside id="widget-foot" class="widget-foot">
+	                    <?php
+    dynamic_sidebar('footer');
+?>
+	                </aside>
+	            <?php
+endif;
+?>
+	        </div><!-- end #footer-widgets -->
+
+			<div class="site-info">
+				<p class="copyright">&copy; <?php
+echo date('Y');
+?> <a href="<?php
+echo home_url();
+?>"><?php
+bloginfo('name');
+?></a>. All Rights Reserved.</p> 
+                <p class="credits"><?php
+printf(__('Theme: %1$s by %2$s.', 'codediva'), 'By Kyle Johnson, Alex Naccarato, and Saad Rabbani', '<a href="http://codediva.com" rel="designer">originally designed by Code Diva</a>');
+?></p>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 
-<?php wp_footer(); ?>
+<?php
+wp_footer();
+?>
 
 </body>
 </html>
